@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Work Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.profile{
+    padding: 24px;
+    width: 90%;
+    margin: 10px auto;
+    background-color: #FCFCFC;
+}
+option[data-circle-color="green"]::before {
+    content: "\2022"; /* Bullet point character */
+    color: green;
+    margin-right: 5px; /* Adjust the margin as needed */
+  }
+  
+  /* Style the option element with a red circle */
+  option[data-circle-color="red"]::before {
+    content: "\2022"; /* Bullet point character */
+    color: red;
+    margin-right: 5px; /* Adjust the margin as needed */
+  }
+
+/* .profile .header{
+    width: 100%;
+    background: url(../../pages/profile/img/profile-3.jpg) no-repeat 50% 20% / cover;
+    min-height: calc(100px + 15vh);
+    border-radius: 10px;
+} */
+
+.profile .colContainer{
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.profile .colContainer .leftCol{
+    padding: 25px 0px;
+    max-width: 350px;
+    position: relative;
+}
+
+.profile .colContainer .leftCol .imgContainer{
+    position: absolute;
+    top: -60px;
+    left: 8%;
+    transform: translateX(-50%);
+}
+
+.profile .colContainer .leftCol .imgContainer .standardImg{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.profile .colContainer .leftCol .imgContainer .vipImage{
+    border: 5px solid hsl(49.1,100%,50.2%);
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.profile .colContainer .leftCol .imgContainer .badge{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 5px;
+    right: 13px;
+}
+
+.profile .colContainer .leftCol  .profileDetails{
+    margin-top: 60px;
+    align-items: start;
+}
+
+
+.profile .colContainer .leftCol  .profileDetails h2{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.profile .colContainer .leftCol  .profileDetails span{
+    font-size: 13px;
+    color: #2afa6a;
+}
+
+.profile .colContainer .leftCol  .profileDetails .verified{
+    display: flex;
+    gap: 5px;
+}
+
+.profile .colContainer .leftCol  .profileDetails p{
+    font-size: 0.8rem;
+    color: #818181;
+    margin: 0;
+}
+
+.profile .infoHeading{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile .infoHeading select{
+    width: 35%;
+    height: 44px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid #eaeaeb;
+    font-weight: 300;
+    font-size: 16px;
+    outline: none;
+    position: relative;
+}
+
+.profile .infoHeading .tabs{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 40%;
+}
+
+.profile .infoHeading .tabs button{
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 10px;
+    color: #818181;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.active{
+    color: #800020;
+    font-weight: 600;
+    background-color: white;
+    padding: 7px 15px;
+    width: 141px;
+}
+
+.profile .profileInfo .profileInfoTitle{
+    color: #818181;
+    margin-bottom: 50px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.profile .profileInfo .profileInfoTitleSecond{
+    color: #818181;
+    margin-bottom: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.profile .profileInfo .editInfo{
+    width: 100%;
+    padding: 25px;
+    display: none;
+    background-color:  #FCFCFC;
+}
+
+.profile .profileInfo .editInfo.active{
+    display: block;
+    width: 100%;
+    padding: 25px;
+    background-color:  #FCFCFC;
+}
+.profile .profileInfo .inputGroup{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.profile .profileInfo .inputGroup .inputItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.editInfoMedia {
+    background-color: #EAEAEB;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadBx .checkIconImage{
+    color: #818181;
+    align-items: center;
+    margin: 0px auto;
+    font-size: 18px;
+}
+
+.profile .profileInfo .inputGroup .inputItem .checkIcon{
+    position: absolute;
+    right: 15%;
+    top: 40px;
+    color: #800020;
+}
+
+
+
+.profile .profileInfo .inputGroup .inputItem label{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.profile .profileInfo .inputGroup .inputItem input{
+    width: 90%;
+    padding: 10px 20px;
+    border: 1px solid #eaeaeb;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.profile .profileInfo .inputGroup .inputItem .phone{
+    display: flex;
+    width: 90%;
+}
+
+.profile .profileInfo .inputGroup .inputItem .phone select{
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-color: #eaeaeb;
+    outline: none;
+}
+
+.profile .profileInfo .inputGroup .inputItem .phone input{
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.profile .profileInfo .inputGroup .inputItem .basicGroup{
+    display: grid;
+    width: 90%;
+    border: 1px solid #eaeaeb;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile .profileInfo .inputGroup .inputItem .age{
+    display: flex;
+    width: 90%;
+    border: 1px solid #eaeaeb;
+    border-radius: 10px;
+}
+
+.profile .profileInfo .inputGroup .inputItem .age .bigger{
+    width: 80%;
+    border: none;
+}
+
+.profile .profileInfo .inputGroup .inputItem .age .smaller{
+    width: 20%;
+    border: none;
+    border-left: 1px solid #eaeaeb;
+    border-radius: 0;
+}
+
+
+.profile .profileInfo .inputGroup .inputItem .basicGroup .half{
+    width: 50%;
+    display: flex;
+}
+
+.profile .profileInfo .inputGroup .inputItem .basicGroup .left{
+    border-left: 1px solid #eaeaeb;
+}
+
+.radio{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+}
+
+.profile .profileInfo .inputGroup .inputItem .basicGroup span{
+    font-size: 14px;
+    text-align: left;
+}
+
+.profile .profileInfo .inputGroup .inputItem .moreInfoSelect{
+    width: 90%;
+    padding: 10px 20px;
+    border: 1px solid #eaeaeb;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+
+.profile .profileInfo input[type="submit"] {
+    padding: 10px 25px;
+    background: #800020;
+    color: #fff;
+    border-radius: 5px;
+    width: 20%;
+    border: none;
+    font-size: 14px;
+}
+
+.profile .profileInfo .editInfoMedia{
+    width: 100%;
+    padding: 25px;
+    display: none;
+    background-color: #EAEAEB;
+}
+
+.profile .profileInfo .editInfoMedia.active{
+    display: block;
+    width: 100%;
+    padding: 25px;
+    background-color: #EAEAEB;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup{
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.profile .profileInfo .editInfo input[type="radio"]:checked{
+    color: #800020;
+    background: #800020;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadBx{
+    width: 200px;
+    border-radius: 5px;
+    border: 1px dashed #eaeaeb;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .bgImage{
+    background: url(../../pages/profile/img/profile-5.jpg) center 100vw / 100vh;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px none;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipImages .uploadBx .bgImage{
+    background: url(../../pages/profile/img/profile-5.jpg) center 100vw / 100vh;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px none;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipvideo .bgImage{
+    background: url(../../pages/profile/img/profile-5.jpg) center 100vw / 100vh;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px none;
+}
+
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadBx p{
+    font-size: 16px;
+    color: #949699;
+    margin: 0px auto 0 auto;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadBx i{
+    color: #818181;
+    align-items: center;
+    margin: 0px auto;
+    font-size: 18px;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadBx span{
+    font-size: 12px;
+    color: #800020;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadBx input{
+    width: 100%;
+    opacity: 0;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx{
+    width: 490px;
+    border-radius: 5px;
+    border: 1px dashed #eaeaeb;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    cursor: pointer;
+    background-color: #F9FAFB;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx  p{
+    font-size: 14px;
+    color: #818181;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx .upgrade{
+    background: hsl(49.1,100%,50.2%);
+    padding:  5px 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx .fa-video-camera{
+    margin: 0 auto;
+    font-size: 16px;
+    color: #818181;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx input{
+    opacity: 0;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx span{
+    color: #800020;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipImages{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipImages .uploadBx {
+    width: 150px;
+    height: 150px;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipvideo{
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    border: 1px dashed #eaeaeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipvideo  p{
+    font-size: 14px;
+    color: #818181;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipvideo input{
+    opacity: 0;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipvideo span{
+    color: #800020;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.profile .profileInfo .editInfoMedia .uploadGroup .vipvideo .fa-video-camera{
+    margin: 0 auto;
+    font-size: 16px;
+    color: #818181;
+}
+
+
+
+/* ====================================== MEDIA QUERIES =========================================== */
+@media screen and (min-width: 1100px) {
+
+    .profile .profileInfo .editInfoMedia .uploadGroup{
+        flex-wrap: wrap;
+    }
+
+}
+@media screen and (max-width: 868px) {
+
+    .profile{
+        width: 100%;
+    }
+
+    .profile .colContainer .leftCol{
+        padding: 25px 20px;
+        text-align: center;
+        max-width: 350px;
+        position: relative;
+        margin: 0 auto; 
+    }
+    
+    /* .profile .profileInfo .editInfoMedia .uploadGroup{
+        flex-direction: column;
+    } */
+    
+    .profile .colContainer .leftCol .imgContainer{
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    
+    .profile .colContainer .leftCol .imgContainer img{
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+        box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+    }
+    
+    .profile .colContainer .leftCol .imgContainer .badge{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: 5px;
+        right: 13px;
+    }
+    
+    .profile .colContainer .leftCol  .profileDetails{
+        margin-top: 60px;
+    }
+
+    .profile .colContainer .leftCol  .profileDetails .verified{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .profile .colContainer .leftCol  .profileDetails h2{
+        font-weight: 600;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .profile .colContainer .leftCol  .profileDetails span{
+        font-size: 13px;
+        color: #2afa6a;
+    }
+    
+    .profile .colContainer .leftCol  .profileDetails p{
+        font-size: 0.8rem;
+        color: #818181;
+        margin: 0;
+    }
+
+    .profile .infoHeading{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 24px;
+        width: 100%;
+    }
+    
+    .profile .infoHeading select{
+        width: 80%;
+        height: 44px;
+        margin: 10px auto;
+    }
+    
+    /* .profile .infoHeading .tabs{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    } */
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .vipImages{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .uploadBx{
+        width: 300px;
+        height: 200px;
+        margin: 5px auto;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx{
+        width: 600px;
+        margin-top: 10px;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .vipvideo{
+        width: 600px;
+        margin-top: 10px;
+    }
+    
+}
+
+
+@media screen and (max-width: 675px) {
+
+    .profile{
+        padding: 10px;
+    }
+    .profile .infoHeading select{
+        width: 100%;
+        height: 44px;
+        font-size: 14px;
+    }
+    
+    .profile .infoHeading .tabs{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .profile .infoHeading .tabs button{
+        padding: 10px 10px;
+        border: none;
+        border-radius: 10px;
+        color: #818181;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    .profile .profileInfo .inputGroup{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .profile .profileInfo input[type="submit"] {
+        width: 90%;
+        margin: 5px auto;
+    }
+    
+    .profile .profileInfo .inputGroup .inputItem input{
+        width: 100%;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup{
+        margin: 10px auto !important;
+    }
+
+    .profile .profileInfo .inputGroup .inputItem .phone{
+        width: 100%;
+    }
+
+    .profile .profileInfo .editInfo .uploadGroup .uploadVideoBx .upgrade{
+        font-size: 14px;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .vipImages{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .vipImages .uploadBx{
+        width: 250px;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .uploadBx{
+        width: 250px;
+        height: 200px;
+        margin: 5px auto;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx{
+        width: 450px;
+        margin: 5px auto;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .vipvideo{
+        width: 450px;
+        margin: 5px auto;
+        height: 150px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 575px) {
+    .profile .profileInfo .editInfoMedia .uploadGroup .uploadBx{
+        width: 300px;
+        height: 200px;
+        margin: 5px auto;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .vipvideo{
+        width: 80vw;
+    }
+    .profile .profileInfo .editInfoMedia .uploadGroup .uploadVideoBx{
+        width: 80vw;
+    }
+    .profile .profileInfo .editInfoMedia .uploadGroup .vipImages{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .profile .profileInfo .editInfoMedia .uploadGroup .bgImage{
+        background: url(../../pages/profile/img/profile-5.jpg) center 50vw / 100vh;
+        object-fit: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px solid;
+    }
+}
+details {
+    font-size: 1rem;
+    margin: 7em auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    width: 500px;
+  }
+  
+  details .summary-title {
+    user-select: none;
+  }
+  
+  details:hover {
+    cursor: pointer;
+  }
+  
+  details .summary-content {
+    border-top: 1px solid #e2e8f0;
+    cursor: default;
+    padding: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  details summary {
+    list-style: none;
+    padding: 1em;
+  }
+  
+  details summary:focus {
+    outline: none;
+  }
+  
+  details summary:hover .summary-chevron-up svg {
+    opacity: 1;
+  }
+  
+  details .summary-chevron-up svg {
+    opacity: 0.5;
+  }
+  
+  details .summary-chevron-up,
+  details .summary-chevron-down {
+    pointer-events: none;
+    position: absolute;
+    top: 0.75em;
+    right: 1em;
+    background: #ffffff;
+  }
+  
+  details .summary-chevron-up svg {
+    display: block;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }

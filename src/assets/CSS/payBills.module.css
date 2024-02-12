@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    list-style-type: none;
+}
+
+.payBills{
+    padding: 25px;
+    width: 90vw;
+    margin: 20px auto;
+}
+
+.payBills h2{
+    margin-bottom: 40px;
+}
+
+.payBills .billCards{
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.payBills .billCards .billCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 3px 3px 10px #eeee;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.payBills .billCards .billCard h4{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.payBills .billCards .billCard p{
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+/* =============================== BUYAIRTIME ============================ */
+
+.buyAirtime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.buyAirtime h4{
+    margin-bottom: 30px;
+}
+
+.buyAirtime .buyAirtimeText{
+    font-size: 14px;
+    font-weight: 300;
+    color: #696c70;
+    margin: 20px 0;
+}
+
+.buyAirtime .amount{
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.buyAirtime .balance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 3px 3px 5px #eeee;
+    padding: 10px 20px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.buyAirtime .balance .balanceText{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buyAirtime .balance .balanceText p{
+    font-size: 14px;
+}
+.AirtimeOptions{
+    width: 100%;
+    margin-top: 30px;
+    padding:0 25px;
+    margin-bottom: 10px;
+}
+
+.AirtimeOptions h5{
+    margin-bottom: 10px;
+}
+
+.AirtimeOptions .selectNetwork .selectBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 10px #eee;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #eaeaeb;
+}
+
+.AirtimeOptions .selectNetwork .sBcontent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.AirtimeOptions .options{
+    position: relative;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 10px #eeee;
+    border-radius: 10px;
+    display: none;
+}
+.AirtimeOptions.active .options{
+    display: block;
+    border: 1px solid #eaeaeb;
+}
+
+.AirtimeOptions.active .checkIcon{
+    transform: rotate(180deg);
+}
+
+.AirtimeOptions.active .checkIcon{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.AirtimeOptions .options .option{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.AirtimeOptions .options .option .fa{
+    color: #800020;
+    font-size: 18px;
+    display: none;
+}
+
+
+.AirtimeOptions .options .option.active .fa{
+    display: block;
+}
+
+.AirtimeOptions .options .option .optionContent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.AirtimeOptions .options .option:hover{
+    background: #eaeaeb;
+}
+
+.AirtimeOptions .options .option .optionText{
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.DataOptions{
+    width: 100%;
+    margin-top: 30px;
+    padding:0 25px;
+    margin-bottom: 10px;
+}
+
+.DataOptions h5{
+    margin-bottom: 10px;
+}
+
+.DataOptions .selectNetwork .selectBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 10px #eee;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #eaeaeb;
+}
+
+.DataOptions .selectNetwork .sBcontent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.DataOptions .options{
+    position: relative;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 10px #eeee;
+    border-radius: 10px;
+    display: none;
+}
+.DataOptions.active .options{
+    display: block;
+    border: 1px solid #eaeaeb;
+}
+
+.DataOptions.active .checkIcon{
+    transform: rotate(180deg);
+}
+
+.DataOptions.active .checkIcon{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.DataOptions .options .doption .fa{
+    color: #800020;
+    font-size: 18px;
+    display: none;
+}
+
+
+.DataOptions .options .doption.active .fa{
+    display: block;
+}
+
+.DataOptions .doptions .doption .optionContent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.DataOptions .options .doption{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.DataOptions .options .doption:hover{
+    background: #eaeaeb;
+}
+
+.DataOptions .options .doption .doptionText{
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.DataOptions .selectNetwork .dselectBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 10px #eee;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #eaeaeb;
+}
+
+.DataOptions .selectNetwork .sBcontent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.DataOptions .options{
+    position: relative;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 10px #eeee;
+    border-radius: 10px;
+    display: none;
+}
+.DataOptions.active .options{
+    display: block;
+    border: 1px solid #eaeaeb;
+}
+
+.DataOptions.active .checkIcon{
+    transform: rotate(180deg);
+}
+
+.DataOptions.active .checkIcon{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.DataOptions .options .option{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.DataOptions .options .option:hover{
+    background: #eaeaeb;
+}
+
+.DataOptions .options .option .optionText{
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.buyAirtime .inputBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 25px;
+}
+
+.buyAirtime .inputBox label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.buyAirtime .inputBox input{
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #eaeaeb;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #eee;
+    margin-bottom: 20px;
+}
+
+.buyAirtime button{
+    width: 90%;
+    padding: 10px 30px;
+    background: #800020;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* ===================================== Responsive ============================= */
+
+
+@media screen and (max-width: 1024px) {
+    .payBills .billCards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 675px) {
+    .payBills .billCards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .buyAirtime .balance{
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px 20px;
+    }
+
+    .AirtimeOptions .selectNetwork .selectBtn{
+        width: 90%;
+        margin: 10px aut0;
+    }
+    
+    .AirtimeOptions .selectNetwork .sBcontent{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .AirtimeOptions.active .options{
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .DataOptions .selectNetwork .selectBtn{
+        width: 90%;
+        margin: 10px aut0;
+    }
+    
+    .DataOptions .selectNetwork .sBcontent{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .DataOptions.active .options{
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .payBills .billCards{
+        grid-template-columns: 1fr;
+    }
+
+    .payBills .billCards .billCard{
+        width: 80vw;
+    }
+
+    .buyAirtime .balance{
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .AirtimeOptions .selectNetwork .selectBtn{
+        width: 100%;
+        margin: 10px auto;
+    }
+    
+    .AirtimeOptions .selectNetwork .sBcontent{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .AirtimeOptions.active .options{
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+
+    .DataOptions .selectNetwork .selectBtn{
+        width: 100%;
+        margin: 10px auto;
+    }
+    
+    .DataOptions .selectNetwork .sBcontent{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .DataOptions.active .options{
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+}
